@@ -1,0 +1,42 @@
+/* start page */
+
+.startpage {
+  background: url('../assets/images/start.jpg');    
+}
+
+/* login page */
+.login {
+  background: url('../assets/images/1.jpg');
+  color: #ffffff;  
+}
+
+/* bussiness page */
+
+i {
+  font-size: 1.5rem;
+}
+/* estilos reutilizables */
+
+header a {
+  color: rgb(179, 178, 178);
+  transition: all 15ms ease;
+}
+
+header a:hover {
+  color: #F07355;
+}
+
+.bg-img {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.heigth {
+  height: 100vh;    
+}
+
+h2 {
+  color: #ffffff;
+}
+
