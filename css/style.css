@@ -1,21 +1,28 @@
 /* start page */
 
 .startpage {
-  background: url('../assets/images/start.jpg');    
+  background: url('../assets/images/start.jpg');
 }
+
 
 /* login page */
+
 .login {
   background: url('../assets/images/1.jpg');
-  color: #ffffff;  
+  color: #ffffff;
 }
 
-/* bussiness page */
 
-i {
-  font-size: 1.5rem;
+/* overview style */
+
+#overview a,
+#overview i {
+  color: black;
 }
+
+
 /* estilos reutilizables */
+
 
 header a {
   color: rgb(179, 178, 178);
@@ -33,10 +40,13 @@ header a:hover {
 }
 
 .heigth {
-  height: 100vh;    
+  height: 100vh;
 }
 
 h2 {
   color: #ffffff;
 }
 
+i {
+  font-size: 1.5rem;
+}
