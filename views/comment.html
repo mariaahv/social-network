@@ -1,12 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <!--Import bootstrap.css-->
+  <link rel="stylesheet" href="../assets/icons/icomoon/style.css">
+  <link rel="stylesheet" href="../vendors/bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Overview</title>
 </head>
+
 <body>
-  
+  <header class="py-1 border-bottom">
+    <ul class="nav justify-content-center nav-justified">
+      <li class="nav-item">
+        <a class="nav-link active" href="business.html">
+          <i class="icon-home3"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link main-color" href="overview.html">
+          <i class="icon-clock"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="messages.html">
+          <i class="icon-earth"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="profile.html">
+          <i class="icon-user"></i>
+        </a>
+      </li>
+    </ul>
+  </header>
+
+  <!-- casilla de ejemplo -->
+  <section id="comment-post">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 border-bottom px-0">
+          <p id="header" class="py-2 px-3 font-weight-bold border-bottom">Azúcar</p>
+          <div class="body border-bottom">
+            <p class="px-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur fuga perspiciatis atque autem libero distinctio
+              ab sunt fugiat aperiam reprehenderit. Iste nihil corrupti facilis libero, minima iusto non accusantium sunt.</p>
+            <div>
+              <img src="../assets/images/2.jpg" class="img-fluid">
+            </div>
+          </div>
+          <p id="footer" class="ml-2 mb-0 py-2 font-weight-bold">
+            <i class="icon-heart-o"></i>
+            <a href="comment.html" role="button" class="ml-2">
+              <i class="icon-comment-o"></i>
+            </a>
+          </p>
+        </div>
+      </div>
+      <form>
+          <div class="form-row">
+            <div class="col-12">
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button class="btn btn-danger col-4 mb-4 mx-2 py-2">
+              Enviar
+            </button>
+          </div>
+        </form>
+    </div>
+  </section>
+  <!-- script -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+    crossorigin="anonymous"></script>
+  <script src="../vendors/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../js/app.js"></script>
 </body>
+
 </html>
