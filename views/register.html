@@ -9,7 +9,24 @@
     <link rel="stylesheet" href="../css/main.css">
   </head>
   <body>
-    
+
+    <!--code of firebase-->
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBdEycW3LtWgNkErWEelXpijIlXQlkkHXQ",
+      authDomain: "social-net-e5cc4.firebaseapp.com",
+      databaseURL: "https://social-net-e5cc4.firebaseio.com",
+      projectId: "social-net-e5cc4",
+      storageBucket: "social-net-e5cc4.appspot.com",
+      messagingSenderId: "959956941410"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+
     <div class="container">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
           <li class="nav-item  col-xs-6 col-sm-6 col-md-6 ">
@@ -66,7 +83,7 @@
                               </div>
                             </div>
                           </div>
-                          <input type="submit" value="Registrate" class="btn btn-warning btn-block col-xs-12 col-sm-12 col-md-6 ">
+                          <input type="submit" value="Registrate" class="btn btn-warning btn-block col-xs-12 col-sm-12 col-md-6 " id="btn_bussiness">
                         </form>
                       </div>
                     </div>
@@ -95,7 +112,7 @@
                             </div>
                             <div class="col-xs-6 col-sm-6 col-md-6">
                               <div class="form-group">
-                                <input type="text" name="LastName-user" id="last-name" class="form-control input-sm" placeholder="Apellidos">
+                                <input type="text" name="LastName-user" id="last_name" class="form-control input-sm" placeholder="Apellidos">
                               </div>
                             </div>
                           </div>
@@ -106,17 +123,17 @@
                           <div class="row">
                             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                               <div class="form-group">
-                                <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Contraseña">
+                                <input type="password" name="password" id="password_user" class="form-control input-sm" placeholder="Contraseña">
                               </div>
                             </div>
                             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                               <div class="form-group">
-                                <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirma contraseña">
+                                <input type="password" name="password_confirmation" id="password_confirmation_user" class="form-control input-sm" placeholder="Confirma contraseña">
                               </div>
                             </div>
                           </div>
 
-                          <input type="submit" value="Registrate" class="btn btn-warning btn-block col-xs-12 col-sm-12 col-md-6">
+                          <input id="btn_user"type="submit" value="Registrate" class="btn btn-warning btn-block col-xs-12 col-sm-12 col-md-6">
 
                         </form>
                       </div>
@@ -133,6 +150,7 @@
 
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
     <script src="../vendors/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../js/register.js"></script>
   </body>
