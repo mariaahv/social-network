@@ -50,6 +50,10 @@ var last_name=false;
 var password_confirmation_user=false;
 
 
+var regexName = /^[a-zA-Z]*$/;
+var regexEmail = (/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$/);
+
+
 $name_business.on('input',verificar_name);
 $Descripcion_business.on('input',verificar_descripcion);
 $Direccion_business.on('input',verificar_direccion);
@@ -57,20 +61,20 @@ $email.on('input',verificar_email);
 $password.on('input',verificar_password);
 // $password_confirmation.on('input',confirm_password);
 $btn_bussiness.click(event => {
-  event.preventDefault();
-  var auth = firebase.auth();
+event.preventDefault();
+var auth = firebase.auth();
     // Sign in
-    var promise = auth.createUserWithEmailAndPassword(email, pass);
-    promise.catch(event => console.log(event.message));
+  var promise = auth.createUserWithEmailAndPassword(email, pass);
+  promise.catch(event => console.log(event.message));
   window.location.href = 'login.html';
 });
 
 
-// $EmaiLUser.on('input','verificar_email');
-// $password_user.on('input','verificar_password');
+$EmaiLUser.on('input',verificar_email_user);
+$password_user.on('input',verificar_password);
 // $btn_user.on('input','register_user');
-// $nameuser.on('input','verificar_name');
-// $last_name.on('input','verificar_lastname');
+$nameuser.on('input',verificar_name_user);
+$last_name.on('input',verificar_lastname);
 // $password_confirmation_user.on('input','confirm_password');
 
 function verificar_name() {
@@ -84,6 +88,19 @@ function verificar_name() {
     }
   }
 
+
+  function verificar_name_user() {
+    if ($(this).val().length >= 3 && regexName.test($(this).val())) {
+        console.log('validado nombre');
+        name_user=true;
+        allInputsValid($btn_user);
+      } else {
+        name_user = false;
+        desactiveButton($btn_user);
+      }
+    }
+
+
   function verificar_descripcion() {
     if ($(this).val().length >= 3 && regexName.test($(this).val())) {
         console.log('Descripcion valid');
@@ -94,6 +111,17 @@ function verificar_name() {
         desactiveButton($btn_bussiness);
       }
     }
+
+    function verificar_lastname() {
+      if ($(this).val().length >= 3 && regexName.test($(this).val())) {
+          console.log('last name validado');
+          last_name=true;
+          allInputsValid($btn_user);
+        } else {
+          last_name=false;
+          desactiveButton($btn_user);
+        }
+      }
 
 
 
@@ -109,21 +137,17 @@ function verificar_name() {
       }
 
 
-function inicio(){
-$('#btn_user').click(validar);
-}
+    function inicio(){
+    $('#btn_user').click(validar);
+    }
 
-function validar (){
-  var nameuser=document.getElementById('name_user').value;
-  if(nameuser==null|| nameuser.length==0){
-    alert('ingresa un caracter');
-    return false;
-  }
-};
-
-var regexName = /^[a-zA-Z]*$/;
-var regexEmail = (/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$/);
-
+    function validar (){
+      var nameuser=document.getElementById('name_user').value;
+      if(nameuser==null|| nameuser.length==0){
+        alert('ingresa un caracter');
+        return false;
+      }
+    };
 
 
 function verificar_email() {
@@ -138,6 +162,18 @@ function verificar_email() {
     }
   };
 
+  function verificar_email_user() {
+      if (regexEmail.test($($EmaiLUser).val())) {
+        console.log('funciona email');
+        EmaiLUser = true;
+        allInputsValid($btn_user);
+
+      } else {
+        EmaiLUser = false;
+        desactiveButton($btn_user);
+      }
+    };
+
   function verificar_password() {
       if ($(this).val().length >= 3 && regexName.test($(this).val())) {
         console.log('funciona password');
@@ -150,9 +186,28 @@ function verificar_email() {
       }
     };
 
+
+    function verificar_password() {
+        if ($(this).val().length >= 3 && regexName.test($(this).val())) {
+          console.log('funciona password');
+          password_user = true;
+          allInputsValid($btn_user);
+
+        } else {
+          password_user = false;
+          desactiveButton($btn_user);
+        }
+      };
+
 function allInputsValid(){
   if(password && email && Direccion_business && Descripcion_business && name_business){
     activeButton($btn_bussiness);
+  }
+};
+
+function allInputsValid(){
+  if(password && email && Direccion_business && Descripcion_business && name_business){
+    activeButton($btn_user);
   }
 };
 
