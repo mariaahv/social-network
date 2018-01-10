@@ -1,51 +1,49 @@
-$(document).ready(function () {
-
-  //obtener elementos 
-  var $name_business = $('#name_business');
-  var $Descripcion_business = $('#Descripcion_business');
-  var $Direccion_business = $('#Direccion_business');
+$(document).ready(function() {
+  // obtener elementos 
+  var $nameBusiness = $('#name_business');
+  var $DescripcionBusiness = $('#Descripcion_business');
+  var $DireccionBusiness = $('#Direccion_business');
   var $email = $('#email');
   var $password = $('#password');
-  var $password_confirmation = $('#password_confirmation');
-  var $btn_bussiness = $('#btn_bussiness');
+  var $btnBussiness = $('#btn_bussiness');
 
 
   var $EmaiLUser = $('#Email-user');
-  var $password_user = $('#password_user');
-  var $btn_user = $('#btn_user');
+  var $passwordUser = $('#password_user');
+  var $btnUser = $('#btn_user');
   var $nameuser = $('#name_user');
-  var $last_name = $('#last_name');
+  var $lastName = $('#last_name');
 
-  var name_business = false;
-  var Descripcion_business = false;
-  var Direccion_business = false;
+  var nameBusiness = false;
+  var descriptionBusiness = false;
+  var placeBusiness = false;
   var email = false;
   var password = false;
-  var btn_bussiness = false;
+  var btnBussiness = false;
 
 
-  var EmaiLUser = false;
-  var password_user = false;
-  var btn_user = false;
-  var nameuser = false;
-  var last_name = false;
+  var emaiLUser = false;
+  var passwordUser = false;
+  var btnUser = false;
+  var nameUser = false;
+  var lastName = false;
 
   var regexName = /^[a-zA-Z]*$/;
   var regexEmail = (/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$/);
 
 
-  $name_business.on('input', verificar_name);
-  $Descripcion_business.on('input', verificar_descripcion);
-  $Direccion_business.on('input', verificar_direccion);
-  $email.on('input', verificar_email);
-  $password.on('input', verificar_password);
-  $btn_bussiness.on('click', openLogin);
+  $nameBusiness.on('input', verifyName);
+  $DescripcionBusiness.on('input', verifyDescription);
+  $DireccionBusiness.on('input', verifyPlace);
+  $email.on('input', verifyEmail);
+  $password.on('input', verifyPassword);
+  $btnBussiness.on('click', openLogin);
 
-  $EmaiLUser.on('input', verificar_email_user);
-  $password_user.on('input', verifyPassword);
-  $nameuser.on('input', verificar_name_user);
-  $last_name.on('input', verificar_lastname);
-  $btn_user.on('click', openLoginUser);
+  $EmaiLUser.on('input', verifyEmailUser);
+  $passwordUser.on('input', verifyPassword);
+  $nameuser.on('input', verifyNameUser);
+  $lastName.on('input', verifyLastname);
+  $btnUser.on('click', openLoginUser);
 
   function openLogin(event) {
     event.preventDefault();
@@ -57,122 +55,118 @@ $(document).ready(function () {
   function openLoginUser(event) {
     event.preventDefault();
     localStorage.email = $EmaiLUser.val();
-    localStorage.password = $password_user.val();
+    localStorage.password = $passwordUser.val();
     window.location.href = 'login.html';
   }
 
-  function verificar_name() {
+  function verifyName() {
     if ($(this).val().length >= 3 && regexName.test($(this).val())) {
       console.log('firstname valid');
-      name_business = true;
-      allInputsValid($btn_bussiness);
+      nameBusiness = true;
+      allInputsValid($btnBussiness);
     } else {
-      name_business = false;
-      desactiveButton($btn_bussiness);
+      nameBusiness = false;
+      desactiveButton($btnBussiness);
     }
   }
 
-  function verificar_name_user() {
+  function verifyNameUser() {
     if ($(this).val().length >= 3 && regexName.test($(this).val())) {
       console.log('validado nombre');
-      name_user = true;
-      inputsValid($btn_user);
+      nameUser = true;
+      inputsValid($btnUser);
     } else {
-      name_user = false;
-      desactiveButton($btn_user);
+      nameUser = false;
+      desactiveButton($btnUser);
     }
   }
 
-  function verificar_descripcion() {
+  function verifyDescription() {
     if ($(this).val().length >= 3 && regexName.test($(this).val())) {
       console.log('Descripcion valid');
-      Descripcion_business = true;
-      allInputsValid($btn_bussiness);
+      descriptionBusiness = true;
+      allInputsValid($btnBussiness);
     } else {
-      Descripcion_business = false;
-      desactiveButton($btn_bussiness);
+      descriptionBusiness = false;
+      desactiveButton($btnBussiness);
     }
   }
 
-  function verificar_lastname() {
+  function verifyLastname() {
     if ($(this).val().length >= 3 && regexName.test($(this).val())) {
       console.log('last name validado');
-      last_name = true;
-      inputsValid($btn_user);
+      lastLame = true;
+      inputsValid($btnUser);
     } else {
-      last_name = false;
-      desactiveButton($btn_user);
+      lastlame = false;
+      desactiveButton($btnUser);
     }
   }
 
-  function verificar_direccion() {
+  function verifyPlace() {
     if ($(this).val().length >= 3 && regexName.test($(this).val())) {
       console.log('Ddireccion valid');
-      Direccion_business = true;
-      allInputsValid($btn_bussiness);
+      placeBusiness = true;
+      allInputsValid($btnBussiness);
     } else {
-      Direccion_business = false;
-      desactiveButton($btn_bussiness);
+      placeBusiness = false;
+      desactiveButton($btnBussiness);
     }
   }
 
-  function verificar_email() {
+  function verifyEmail() {
     if (regexEmail.test($($email).val())) {
       console.log('funciona email');
       email = true;
-      allInputsValid($btn_bussiness);
-
+      allInputsValid($btnBussiness);
     } else {
       email = false;
-      desactiveButton($btn_bussiness);
+      desactiveButton($btnBussiness);
     }
   };
 
-  function verificar_email_user() {
+  function verifyEmailUser() {
     if (regexEmail.test($($EmaiLUser).val())) {
       console.log('funciona email');
-      EmaiLUser = true;
-      inputsValid($btn_user);
-
+      emaiLUser = true;
+      inputsValid($btnUser);
     } else {
-      EmaiLUser = false;
-      desactiveButton($btn_user);
-    }
-  };
-
-  function verificar_password() {
-    if ($(this).val().length >= 3 && regexName.test($(this).val())) {
-      console.log('funciona password');
-      password = true;
-      allInputsValid($btn_bussiness);
-
-    } else {
-      password = false;
-      desactiveButton($btn_bussiness);
+      emaiLUser = false;
+      desactiveButton($btnUser);
     }
   };
 
   function verifyPassword() {
     if ($(this).val().length >= 3 && regexName.test($(this).val())) {
       console.log('funciona password');
-      password_user = true;
-      inputsValid($btn_user);
+      password = true;
+      allInputsValid($btnBussiness);
     } else {
-      password_user = false;
-      desactiveButton($btn_user);
+      password = false;
+      desactiveButton($btnBussiness);
+    }
+  };
+
+  function verifyPassword() {
+    if ($(this).val().length >= 3 && regexName.test($(this).val())) {
+      console.log('funciona password');
+      passwordUser = true;
+      inputsValid($btnUser);
+    } else {
+      passworduser = false;
+      desactiveButton($btnUser);
     }
   };
 
   function allInputsValid() {
-    if (password && email && Direccion_business && Descripcion_business && name_business) {
-      activeButton($btn_bussiness);
+    if (password && email && placeBusiness && descriptionBusiness && nameBusiness) {
+      activeButton($btnBussiness);
     }
   };
 
   function inputsValid() {
-    if (password_user && EmaiLUser && last_name && name_user) {
+    if (passwordUser && emaiLUser && lastName && nameUser) {
       activeButton(btn_user);
     }
   }
-
 });

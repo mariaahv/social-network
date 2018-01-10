@@ -1,100 +1,105 @@
-body{
-    /* background-color: #9D2360 ; */
-}
-.centered-form{
-	margin-top: 60px;
+body {
+  /* background-color: #9D2360 ; */
 }
 
-.centered-form .panel{
-	background: linear-gradient(rgb(89, 6, 75  )5%,rgb(218, 10, 134));
-	box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+.centered-form {
+  margin-top: 60px;
 }
 
-#titulo{
+/* .centered-form .panel {
+  background: linear-gradient(rgb(89, 6, 75)5%, rgb(218, 10, 134));
+  box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+} */
+
+#titulo {
   color: #F0E8EF;
 }
 
-.icons{
+.icons {
   font-size: 3rem;
 }
 
 /* styles para bussines */
 
-#nav{
-   background: #5E2249;
-}
+/* #nav {
+  background: #5E2249;
+} */
 
-#nav li{
+#nav li {
   border: 1px solid white;
 }
+
 .card {
-    /* outline: 1px solid red; */
-    padding-top: 20px;
-    margin: 10px 0 20px 0;
-    border-top-width: 0;
-    border-bottom-width: 2px;
-    border-radius: 3px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  /* outline: 1px solid red; */
+  padding-top: 20px;
+  margin: 10px 0 20px 0;
+  border-top-width: 0;
+  border-bottom-width: 2px;
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-
-
 .card.hovercard {
-    position: relative;
-    padding-top: 0;
-    overflow: hidden;
-    text-align: center;
-    background-color: rgba(214, 224, 226, 0.2);
+  position: relative;
+  padding-top: 0;
+  overflow: hidden;
+  text-align: center;
+  background-color: rgba(214, 224, 226, 0.2);
 }
 
 .card.hovercard .cardheader {
-    background: url("http://www.educativo.net/xframework/files/entities/articulos/769/img.jpg");
-    background-size: cover;
-    height: 250px;
+  background: url("http://www.educativo.net/xframework/files/entities/articulos/769/img.jpg");
+  background-size: cover;
+  height: 250px;
 }
 
 .card.hovercard .avatar {
-    position: relative;
-    top: -50px;
-    margin-bottom: -50px;
+  position: relative;
+  top: -50px;
+  margin-bottom: -50px;
 }
 
 .card.hovercard .avatar img {
-    width: 100px;
-    height: 100px;
-    max-width: 100px;
-    max-height: 100px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    border: 5px solid rgba(255,255,255,0.5);
+  width: 100px;
+  height: 100px;
+  max-width: 100px;
+  max-height: 100px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.5);
 }
 
 .card.hovercard .info {
-    padding: 4px 8px 10px;
+  padding: 4px 8px 10px;
 }
 
 .card.hovercard .info .title {
-    margin-bottom: 4px;
-    font-size: 24px;
-    line-height: 1;
-    color: white;
-    vertical-align: middle;
+  margin-bottom: 4px;
+  font-size: 24px;
+  line-height: 1;
+  color: white;
+  vertical-align: middle;
 }
 
 .card.hovercard .info .desc {
-    overflow: hidden;
-    font-size: 12px;
-    line-height: 20px;
-    color: white;
-    text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 20px;
+  color: white;
+  text-overflow: ellipsis;
 }
 
 .card.hovercard .bottom {
-    padding: 0 20px;
-    margin-bottom: 17px;
+  padding: 0 20px;
+  margin-bottom: 17px;
 }
 
-#btn{ border-radius: 50%; width:32px; height:32px; line-height:18px;  }
+#btn {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  line-height: 18px;
+}

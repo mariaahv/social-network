@@ -25,7 +25,20 @@
   color: black;
 }
 
+/* style profile */
 
+#post-text {
+  resize: none;
+  overflow: hidden;
+}
+
+p#footer a {
+  color: black
+}
+
+#section-write-post {
+  background-color: #f7b2a1;
+}
 /* estilos reutilizables */
 
 .border-bottom {
