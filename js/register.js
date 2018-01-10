@@ -45,13 +45,22 @@ $(document).ready(function () {
   $password_user.on('input', verifyPassword);
   $nameuser.on('input', verificar_name_user);
   $last_name.on('input', verificar_lastname);
-  $btn_user.on('click', openLogin);
+  $btn_user.on('click', openLoginUser);
 
   function openLogin(event) {
     event.preventDefault();
+    localStorage.email = $email.val();
+    localStorage.password = $password.val();
     window.location.href = 'login.html';
   }
-  
+
+  function openLoginUser(event) {
+    event.preventDefault();
+    localStorage.email = $EmaiLUser.val();
+    localStorage.password = $password_user.val();
+    window.location.href = 'login.html';
+  }
+
   function verificar_name() {
     if ($(this).val().length >= 3 && regexName.test($(this).val())) {
       console.log('firstname valid');
