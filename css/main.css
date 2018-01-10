@@ -1,15 +1,6 @@
-body {
-  /* background-color: #9D2360 ; */
-}
-
 .centered-form {
   margin-top: 60px;
 }
-
-/* .centered-form .panel {
-  background: linear-gradient(rgb(89, 6, 75)5%, rgb(218, 10, 134));
-  box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
-} */
 
 #titulo {
   color: #F0E8EF;
@@ -20,10 +11,6 @@ body {
 }
 
 /* styles para bussines */
-
-/* #nav {
-  background: #5E2249;
-} */
 
 #nav li {
   border: 1px solid white;

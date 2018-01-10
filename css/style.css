@@ -25,6 +25,19 @@
   color: black;
 }
 
+/* register style */ 
+
+#register {
+  background: url('../assets/images/1.jpg');
+  color: white;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+ul#myTab.nav.navTabs a {
+  color: ;
+}
 /* style profile */
 
 #post-text {
