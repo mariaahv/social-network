@@ -40,7 +40,7 @@ $(document).ready(function() {
   $btnBussiness.on('click', openLogin);
 
   $EmaiLUser.on('input', verifyEmailUser);
-  $passwordUser.on('input', verifyPassword);
+  $passwordUser.on('input', verifyPasswordUser);
   $nameuser.on('input', verifyNameUser);
   $lastName.on('input', verifyLastname);
   $btnUser.on('click', openLoginUser);
@@ -147,18 +147,19 @@ $(document).ready(function() {
     }
   };
 
-  function verifyPassword() {
+  function verifyPasswordUser() {
     if ($(this).val().length >= 3 && regexName.test($(this).val())) {
       console.log('funciona password');
       passwordUser = true;
       inputsValid($btnUser);
     } else {
-      passworduser = false;
+      passwordUser = false;
       desactiveButton($btnUser);
     }
   };
 
   function allInputsValid() {
+    debugger;    
     if (password && email && placeBusiness && descriptionBusiness && nameBusiness) {
       activeButton($btnBussiness);
     }
