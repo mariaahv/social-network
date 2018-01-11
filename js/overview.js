@@ -15,18 +15,24 @@
 // }
 
 $(document).ready(function() {
+
+  var likes= $('#likes');
+  var calificacion= $('#calificacion');
+
   var like = 0 , unlike = 0 , out = '';
 
-  // function calificacion_publi() {
-  if ( $('#calificacion').click(function() {
-    like++;
-    console.log('like');
-    $("#calificacion").css("color", " red");})) {
-  } else {
-    like--;
-    console.log('unlike');
-   $("#calificacion").css("color", " black");
-  }
+  calificacion.on('click',function(){
+    //  if ( true) {
+      likes.text(like);
+        like++;
+      calificacion.css("color", " red");
+  });
+
+//    else {
+//     like--;
+//     console.log('unlike');
+//    $("#calificacion").css("color", " black");
+//   }
 // }
 
 
