@@ -32,8 +32,6 @@ function createSectionProfile() {
     return divContainerPost;
   }
 
-
-
   function addPostInHtml(element) {
     element.appendTo(sectionUserPost);
   }
