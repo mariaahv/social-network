@@ -8,6 +8,7 @@
   <!--Import bootstrap.css-->
   <link rel="stylesheet" href="../vendors/bootstrap/css/bootstrap.min.css" />
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../assets/icons/icomoon1/style.css">
   <title>Welcome</title>
 </head>
 
@@ -19,16 +20,19 @@
       </h2>
     </div>
     <div class="row justify-content-center align-items-center heigth-1">
+      <a type="a" class="btn btn-danger col-7 mb-4 mx-4 py-3 font-weight-bold" role="a" href="#" id="btn-google">
+        <i class="icon-google2"></i> Login with Google</a>
       <a type="a" class="btn btn-danger col-4 mb-4 mx-2 py-3" href="login.html" role="a">LOG IN</a>
       <a type="a" class="btn btn-danger col-4 mb-4 mx-2 py-3" href="register.html" role="a">SIGN UP</a>
     </div>
   </div>
 
-  <!-- script -->
+  <!-- jQuery first, then Tether, then Bootstrap JS. -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
-    crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <script src="../vendors/bootstrap/js/bootstrap.min.js"></script>
-  <script src="../js/app.js"></script>
+  <script src="../js/auth.js"></script>
 </body>
+
 </html>

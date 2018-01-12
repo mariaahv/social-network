@@ -50,6 +50,13 @@
   background: url('../assets/images/start.jpg');
 }
 
+#btn-google {
+  background-color: #ffffff;
+  color: #F07355;
+  border: none;
+  cursor: pointer;
+}
+
 /* login page */
 
 .login {
@@ -75,9 +82,6 @@
   background-size: cover;
 }
 
-ul#myTab.nav.navTabs a {
-  color: ;
-}
 /* style profile */
 
 #post-text {

@@ -1,8 +1,7 @@
-
+// funcionalidad para activar ydesactivar los botones de distintas vistas
 function activeButton(button) {
   button.attr('disabled', false);
 };
-
 
 function desactiveButton(button) {
   button.attr('disabled', 'disabled');
