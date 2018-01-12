@@ -5,10 +5,10 @@ function viewSplash() {
     window.location.href = 'views/start-page.html';
   }, 5000);
 
-  $(function(){
-    setTimeout(function(){
+  $(function() {
+    setTimeout(function() {
       $('.fly-in-text').removeClass('hidden');
-    },500);
+    }, 500);
   })();
 
 }

@@ -1,8 +1,7 @@
 /* VISTA SPLASH */
 
 #loader {
-  /* background-image: url('../assets/images/plan.jpg'); */
-  background: linear-gradient(to right, red , yellow);
+  background: #F07355;  
   color: #ffffff;
 }
 
@@ -22,10 +21,6 @@
   font-size: 3em;
   opacity: 1;
   transition: all 2.5s ease;
-  text-shadow: 3px 3px 5px #f00,
-               6px 6px 5px #0f0,
-               9px 9px 5px #00f;
-
 }
 
 .fly-in-text.hidden li:nth-child(1) { transform: translateX(-200px) translateY(-200px); }
