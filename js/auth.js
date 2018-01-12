@@ -7,13 +7,14 @@ var config = {
   storageBucket: 'jumpbuss-d6dfe.appspot.com',
   messagingSenderId: '64604098524'
 };
+
 firebase.initializeApp(config);
 $(document).ready(function() {
   console.log('cargue');
   var user = null;
   var btnLoginGoogle = $('#btn-google');
-  btnLoginGoogle.on('click', function() { 
-    // event.preventDefault();
+  btnLoginGoogle.on('click', function(event) { 
+    event.preventDefault();
     var provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider).then(function(result) {
       // This gives you a Google Access Token. You can use it to access the Google API.
@@ -31,5 +32,6 @@ $(document).ready(function() {
       var credential = error.credential;
       // ...
     });
+    window.location.href = 'overview.html';
   });
 });
