@@ -20,6 +20,8 @@ Organizamos las tareas a realizar mediante pasos , los cuales organizammos con t
 + Maquetacion de las vistas
 + codificacion de funcionalidad , validaciones  
 
+![jumpbuss](assets/images/trello.png)
+
 ### Funcionalidad
 Explicaremos en breve  , en que consiste las funcionalidades de este trabajo :
 Se podran registrar en esta red social tanto empresas como personas ;
@@ -37,4 +39,4 @@ Recursos :
 - localstore
 
 ![jumpbuss](assets/images/img1.jpg)
-![jumpbuss](assets/images/img3.jpg)
+![jumpbuss](assets/images/img2.jpg)
