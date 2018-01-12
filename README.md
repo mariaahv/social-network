@@ -34,9 +34,7 @@ Recursos :
 - jQuery
 - trello
 - icomoon
-- firebase
+- localstore
 
-![jumpbuss](assets/images/img1.jpg "skecth")
-
-
-![jumpbuss](assets/images/img3.jpg "skecth")
+![jumpbuss](assets/images/img1.jpg)
+![jumpbuss](assets/images/img3.jpg)
