@@ -1,8 +1,48 @@
 /* VISTA SPLASH */
 
 #loader {
-  background-color: #F07355;
+  /* background-image: url('../assets/images/plan.jpg'); */
+  background: linear-gradient(to right, red , yellow);
   color: #ffffff;
+}
+
+.fly-in-text{
+  text-align: center;
+  list-style: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.fly-in-text li{
+  display: inline-block;
+  font-family: sans-serif;
+  font-weight: 300;
+  font-size: 3em;
+  opacity: 1;
+  transition: all 2.5s ease;
+  text-shadow: 3px 3px 5px #f00,
+               6px 6px 5px #0f0,
+               9px 9px 5px #00f;
+
+}
+
+.fly-in-text.hidden li:nth-child(1) { transform: translateX(-200px) translateY(-200px); }
+.fly-in-text.hidden li:nth-child(2) { transform: translateX(20px) translateY(100px); }
+.fly-in-text.hidden li:nth-child(3) { transform: translateX(-150px) translateY(-80px); }
+.fly-in-text.hidden li:nth-child(4) { transform: translateX(10px) translateY(-200px); }
+.fly-in-text.hidden li:nth-child(5) { transform: translateX(-300px) translateY(200px); }
+.fly-in-text.hidden li:nth-child(6) { transform: translateX(20px) translateY(-20px); }
+.fly-in-text.hidden li:nth-child(7) { transform: translateX(30px) translateY(200px); }
+.fly-in-text.hidden li:nth-child(8) { transform: translateX(20px) translateY(100px); }
+
+
+.fly-in-text li:last-child{
+  margin-right: 0;
+}
+.fly-in-text.hidden li{
+  opacity:0;
 }
 /* start page */
 
@@ -25,7 +65,7 @@
   color: black;
 }
 
-/* register style */ 
+/* register style */
 
 #register {
   background: url('../assets/images/1.jpg');
