@@ -1,12 +1,11 @@
-$(document).ready(function() {
-  // obtener elementos
+$(document).ready(function () {
+  // obtener elementos 
   var $nameBusiness = $('#name_business');
   var $DescripcionBusiness = $('#Descripcion_business');
   var $DireccionBusiness = $('#Direccion_business');
   var $email = $('#email');
   var $password = $('#password');
   var $btnBussiness = $('#btn_bussiness');
-
 
   var $EmaiLUser = $('#Email-user');
   var $passwordUser = $('#password_user');
@@ -21,7 +20,6 @@ $(document).ready(function() {
   var password = false;
   var btnBussiness = false;
 
-
   var emaiLUser = false;
   var passwordUser = false;
   var btnUser = false;
@@ -30,7 +28,6 @@ $(document).ready(function() {
 
   var regexName = /^[a-zA-Z]*$/;
   var regexEmail = (/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$/);
-
 
   $nameBusiness.on('input', verifyName);
   $DescripcionBusiness.on('input', verifyDescription);
@@ -47,9 +44,31 @@ $(document).ready(function() {
 
   function openLogin(event) {
     event.preventDefault();
-    localStorage.email = $email.val();
-    localStorage.password = $password.val();
-    window.location.href = 'login.html';
+    // regIstro de nuevo usuario con FIREBASE
+    firebase.auth().createUserWithEmailAndPassword($email.val(), $password.val()).catch(function (error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log(errorMessage);
+    });
+    // ver el cambio de un usuario : registrar sus datos en firebase.database
+    firebase.auth().onAuthStateChanged(function (user) {
+      if (user) {
+        // User is signed in.        
+        firebase.database().ref('users/' + user.uid).set({
+          email: user.email,
+          name: user.displayName,
+          uid: user.uid,
+          profilePicture: user.photoURL
+        }).then(
+          user => {
+            window.location.href = 'login.html';
+          });
+      } else {
+        // User is signed out.
+        console.log('usuario registrado correctamente');
+      }
+    });
   }
 
   function openLoginUser(event) {
@@ -137,7 +156,7 @@ $(document).ready(function() {
   };
 
   function verifyPassword() {
-    if ($(this).val().length >= 3 && regexName.test($(this).val())) {
+    if ($(this).val().length >= 6 && regexName.test($(this).val())) {
       console.log('funciona password');
       password = true;
       allInputsValid($btnBussiness);
@@ -148,7 +167,7 @@ $(document).ready(function() {
   };
 
   function verifyPasswordUser() {
-    if ($(this).val().length >= 3 && regexName.test($(this).val())) {
+    if ($(this).val().length >= 6 && regexName.test($(this).val())) {
       console.log('funciona password');
       passwordUser = true;
       inputsValid($btnUser);
