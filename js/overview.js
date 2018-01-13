@@ -10,6 +10,8 @@ $(document).ready(function() {
 
   textArea.on('input', verifyTextInput);
   btnPost.on('click', getTextInput);
+  // btnArchivo.on('mouseover', activeButtonImg);
+
 
   function verifyTextInput() {
     var textPost = $('#post-text').val();
@@ -19,6 +21,7 @@ $(document).ready(function() {
       desactiveButton(btnPost);
     }
   }
+
 
   function getTextInput(event) {
     event.preventDefault();
@@ -30,17 +33,17 @@ $(document).ready(function() {
   function createElementsHtml(text) {
     var divContainerPost = $('<div></div>');
     divContainerPost.addClass('col-12 border-bottom px-0');
-    divContainerPost.html('<p id="header" class="py-2 px-3 font-weight-bold border-bottom">Azúcar</p><div class="body border-bottom"><p class="px-3">' + text + '</p></div><p id="footer" class="ml-2 mb-0 py-2 font-weight-bold"><i class="icon-heart-o calificacion" id="calificacion"></i> <button type="button" class="btn btn-warning likes" id="likes"></button> <a href="comment.html" role="button" class="ml-2"><i class="icon-comment-o"></i></a></p>');
+    divContainerPost.html('<p id="header" class="py-2 px-3 font-weight-bold border-bottom">Azúcar</p><div class="body border-bottom"><p class="px-3">' + text + '</p></div><p id="footer" class="ml-2 mb-0 py-2 font-weight-bold"><i class="icon-heart-o calificacion" id="calificacion"></i> <button type="button" class="btn btn-warning likes" id="likes"></button> <a href="comment.html" role="button" class="ml-2"><i class="icon-comment-o"></i></a></p> ');
     return divContainerPost;
   }
 
-  function addPostInHtml(element) { debugger;
+  function addPostInHtml(element) {
     element.appendTo(sectionUserPost);
     var likes = $('.likes');
     var calificacion = $('.calificacion');
     var like = 1;
     calificacion.on('click', function likesPost() {
-      debugger;
+
       likes.text(like);
       like++;
       calificacion.css('color', ' red');
@@ -55,5 +58,27 @@ $(document).ready(function() {
     likes.text(like);
     like++;
     calificacion.css('color', ' red');
+
   }
+
+  // funcionalidad de subir foto
+
+    $('#file-select').on('click', function(e) {
+         e.preventDefault();
+        $('#file').click();
+    })
+
+    $('input[type=file]').change(function() {
+        var file = (this.files[0].name).toString();
+        var reader = new FileReader();
+
+        $('#file-info').text('');
+        $('#file-info').text(file);
+
+        reader.onload = function (e) {
+        $('#preview img').attr('src', e.target.result);
+    	 }
+
+         reader.readAsDataURL(this.files[0]);
+    });
 });
