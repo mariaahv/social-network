@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  // obtener elementos 
+  // obtener elementos
   var $nameBusiness = $('#name_business');
   var $DescripcionBusiness = $('#Descripcion_business');
   var $DireccionBusiness = $('#Direccion_business');
@@ -159,7 +159,6 @@ $(document).ready(function() {
   };
 
   function allInputsValid() {
-    debugger;    
     if (password && email && placeBusiness && descriptionBusiness && nameBusiness) {
       activeButton($btnBussiness);
     }

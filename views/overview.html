@@ -43,12 +43,19 @@
       <div class="row">
         <form class="col-12">
           <div class="form-row pt-3 px-2">
-            <div>
-              <textarea class="form-control textarea" id="post-text"></textarea>
+              <div id="preview">
+                <textarea class="form-control textarea" id="post-text"></textarea>
+                <img src="#" alt="" id="dowload">
+              </div>
+              <div class=" col-xs-12 col-sm-12 col-md-12" >
+                <button class="btn btn-danger  col-xs-3 col-sm-3 col-md-3" id="post" disabled>
+                  Enviar
+                </button>
+                <a href="#" id="file-select" class="btn btn-danger col-xs-3 col-sm-3 col-md-4">Elegir archivo</a>
+                <button class="btn btn-info col-xs-3 col-sm-3 col-md-3" id="file-info" disabled>No hay archivo aún</button>
+              </div>
+              <input id="file" name="file" type="file"/>
             </div>
-            <button class="btn btn-danger col-4 mb-2 mt-2 mx-2 py-2" id="post" disabled>
-              Enviar
-            </button>
           </div>
         </form>
       </div>
