@@ -10,5 +10,4 @@ function viewSplash() {
       $('.fly-in-text').removeClass('hidden');
     }, 500);
   })();
-
 }

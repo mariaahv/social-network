@@ -7,6 +7,7 @@ var config = {
   storageBucket: 'jumpbuss-d6dfe.appspot.com',
   messagingSenderId: '64604098524'
 };
+
 firebase.initializeApp(config);
 
 $(document).ready(function () {

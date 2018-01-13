@@ -1,8 +1,9 @@
 /* VISTA SPLASH */
 
 #loader {
-  background: #F07355;  
   color: #ffffff;
+  background: radial-gradient(#5353b3, #6c28ac);
+  /* background: radial-gradient(#ff5d35, #d9534f); */
 }
 
 .fly-in-text{
@@ -32,13 +33,13 @@
 .fly-in-text.hidden li:nth-child(7) { transform: translateX(30px) translateY(200px); }
 .fly-in-text.hidden li:nth-child(8) { transform: translateX(20px) translateY(100px); }
 
-
 .fly-in-text li:last-child{
   margin-right: 0;
 }
 .fly-in-text.hidden li{
   opacity:0;
 }
+
 /* start page */
 
 .startpage {
