@@ -53,6 +53,14 @@
   cursor: pointer;
 }
 
+#btn-facebook {
+  background-color: #ffffff;
+  color: #F07355;
+  border: none;
+  cursor: pointer;
+}
+
+
 /* login page */
 
 .login {
@@ -163,3 +171,43 @@ i {
 a:hover, a:focus {
   text-decoration: none;
 }
+
+.icon-user-check{
+  font-size: 50px;
+}
+
+.contenedor{
+  margin-left: 20px;
+  text-align: center;
+  display: flex;
+  width: 300px;
+  height: 40px;
+  color: red;
+  font-size: 30px;
+  line-height: 40px;
+   overflow: hidden;
+   font-family:serif;
+}
+
+ul {
+  list-style: none;
+  padding-left: 10px;
+  color: orange;
+  animation: cambiar 5s infinite;
+}
+
+#animation ,h3 {
+  margin: 0;
+}
+
+  @keyframes cambiar{
+      0%   {margin-top: 0;}
+      20%  {margin-top: 0;}
+      25%  {margin-top: -40px}
+      50%  {margin-top: -40px;}
+      55% {margin-top: -80px;}
+      80% {margin-top: -80px;}
+      85% {margin-top: -40px;}
+      95% {margin-top: -40px;}
+      100% {margin-top: 0px;}
+  }
