@@ -8,20 +8,31 @@ var config = {
   messagingSenderId: '64604098524'
 };
 firebase.initializeApp(config);
-$(document).ready(function() {
-  console.log('cargue');
+
+$(document).ready(function () {
   var user = null;
   var btnLoginGoogle = $('#btn-google');
-  btnLoginGoogle.on('click', function() { 
-    // event.preventDefault();
+
+  btnLoginGoogle.on('click', loginGoogle);
+
+  // inicio de sesion con google
+  function loginGoogle() {
     var provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithPopup(provider).then(function(result) {
-      // This gives you a Google Access Token. You can use it to access the Google API.
+
+    firebase.auth().signInWithPopup(provider).then(function (result) {
       var token = result.credential.accessToken;
-      // The signed-in user info.
-      var user = result.user;
+      user = result.user;
       console.log(user);
-    }).catch(function(error) {
+      firebase.database().ref('users/' + user.uid).set({
+        email: user.email,
+        name: user.displayName,
+        uid: user.uid,
+        profilePicture: user.photoURL
+      }).then(
+        user => {
+          window.location.href = 'profile.html';
+        });
+    }).catch(function (error) {
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
@@ -31,5 +42,5 @@ $(document).ready(function() {
       var credential = error.credential;
       // ...
     });
-  });
+  };
 });
