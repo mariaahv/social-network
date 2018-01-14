@@ -211,3 +211,26 @@ a:hover, a:focus {
   95% {margin-top: -40px;}
   100% {margin-top: 0px;}
 }
+
+.imgs{
+  margin-top: 20px;
+  width: 40%;
+  height: 20%;
+}
+
+#business{
+  background:#C0F3FC   ;
+}
+
+#nav_business{
+  background: #11D9F7;
+}
+
+#messages{
+  background:#A1DFF1 ;
+  font-family: 'Kavivanar', cursive;
+}
+
+.list-group-item{
+    background:#C4EDF9 ;
+}
