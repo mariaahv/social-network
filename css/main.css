@@ -88,3 +88,11 @@
   height: 32px;
   line-height: 18px;
 }
+
+#nav_profile{
+  background: #11D9F7;
+}
+#profile{
+  background:#A1DFF1 ;
+  font-family: 'Kavivanar', cursive;
+}
